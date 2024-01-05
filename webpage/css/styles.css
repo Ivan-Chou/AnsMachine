@@ -1,16 +1,16 @@
 body {
-    height:100%;
-    
+    height: 100%;
+
     display: flex;
     flex-direction: column;
 
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 
     background-color: #ffffbb;
 }
 
-body >* {
+body>* {
     margin: 5px;
 }
 
@@ -28,7 +28,7 @@ button:hover {
 
 #title_area {
     width: 95%;
-    
+
     background-color: white;
     border: 3px solid cyan;
 
@@ -53,31 +53,32 @@ button:hover {
     border: 3px solid orange;
 }
 
-#setting_area >* {
+#setting_area>* {
     margin: 5px;
 }
 
 .env_setting {
     width: 40%;
-    
+
     display: flex;
-    
-    justify-content:center;
+
+    justify-content: center;
     align-items: center;
 }
 
-.env_setting > input {
+.env_setting>input {
     width: 30px;
 
     text-align: center;
 }
 
-#setting_submit{
+#setting_submit {
     width: 10%;
 }
 
 
 @media (max-width:563px) {
+
     /* mobile device */
     #setting_area {
         height: 20vh;
@@ -88,7 +89,7 @@ button:hover {
         width: 90%;
     }
 
-    #setting_submit{
+    #setting_submit {
         width: 50%;
     }
 }
@@ -115,7 +116,7 @@ button:hover {
 
     display: flex;
     flex-direction: row;
-    
+
     justify-content: center;
     align-items: center;
 
@@ -124,14 +125,14 @@ button:hover {
     color: white;
 }
 
-#timer >* {
+#timer>* {
     margin: 5px;
 }
 
 #Q_display {
     width: 100%;
 
-    display:flex;
+    display: flex;
     flex-direction: column;
 
     justify-content: center;
@@ -149,11 +150,11 @@ button:hover {
 
     border-top: 2px solid #a9d7ff;
     border-bottom: 2px solid #a9d7ff;
-    
+
     margin: 5px;
 }
 
-.Q_template >* {
+.Q_template>* {
     margin: 3px;
 }
 
@@ -163,7 +164,7 @@ button:hover {
     display: flex;
 
     justify-content: center;
-    align-items:center;
+    align-items: center;
 
     border: 1px solid yellow;
 }
@@ -171,14 +172,14 @@ button:hover {
 .Q_choices {
     width: 95%;
 
-    display:flex;
+    display: flex;
     flex-direction: column;
 
     justify-content: center;
     align-items: center;
 }
 
-.Q_choices > * {
+.Q_choices>* {
     margin: 3px;
 }
 
@@ -198,13 +199,13 @@ button:hover {
     color: white;
 }
 
-.choice >* {
+.choice>* {
     margin: 2px;
 }
 
 .choice_choose {
     width: 5%;
-    min-width:30px;
+    min-width: 30px;
 }
 
 .choice_statement {
@@ -229,7 +230,7 @@ button:hover {
 
 #switch_one {
     width: 100%;
-    
+
     display: flex;
     flex-direction: row;
 
@@ -249,13 +250,13 @@ button:hover {
     align-items: center;
 }
 
-.switch_btn > button {
+.switch_btn>button {
     width: 80%;
 }
 
 #Q_list {
     width: 98%;
-    
+
     display: flex;
     flex-direction: row;
 
@@ -279,7 +280,7 @@ button:hover {
     padding: 3px;
 }
 
-#answers_submit{
+#answers_submit {
     width: 70%;
 }
 
@@ -298,7 +299,7 @@ button:hover {
     border: 3px solid blue;
 }
 
-#grade_area >* {
+#grade_area>* {
     margin: 5px;
 }
 

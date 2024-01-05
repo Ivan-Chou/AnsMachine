@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" lang="zh-tw">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" lang="zh-tw">
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-	<title>國防試題答題機</title>
+    <script type="text/javascript" src="scripts/script.js" defer></script>
+    <script type="text/javascript" src="scripts/Qs.js" defer></script>
+
+    <title>國防試題答題機</title>
 </head>
+
 <body>
-    <div id="title_area">全民國防試題答題機</div> 
+    <div id="title_area">全民國防試題答題機</div>
     <div id="setting_area">
         <div class="env_setting">
             <label for="Qamount">請輸入欲答題數：</label>
-            <input type="text" id="Qamount" value="50"/>
+            <input type="text" id="Qamount" value="50" />
         </div>
         <div class="env_setting">
             <label for="exam_time">請輸入答題時間(分鐘)：</label>
-            <input type="text" id="exam_time" value="10"/>
+            <input type="text" id="exam_time" value="10" />
         </div>
         <button id="setting_submit">確認</button>
     </div>
@@ -27,29 +32,30 @@
             <span>剩餘時間：</span>
             <span id="left_time">00:00</span>
         </div>
-        
+
         <div id="Q_display">
             <div class="Q_template">
                 <span class="Q_statement">(題幹)</span>
-                
+
                 <div class="Q_choices">
                     <div class="choice">
-                        <input class="choice_choose" type="radio" name="choice_choose"/> <!-- (?) same name among questions => conflict? -->
-                        <div class="choice_statement">(選項)</div> <!-- maybe text or image -->
-                    </div>
-                    
-                    <div class="choice">
-                        <input class="choice_choose" type="radio" name="choice_choose"/>
+                        <input class="choice_choose" type="radio" name="choice_choose" />
+                        <!-- (?) same name among questions => conflict? -->
                         <div class="choice_statement">(選項)</div> <!-- maybe text or image -->
                     </div>
 
                     <div class="choice">
-                        <input class="choice_choose" type="radio" name="choice_choose"/>
+                        <input class="choice_choose" type="radio" name="choice_choose" />
                         <div class="choice_statement">(選項)</div> <!-- maybe text or image -->
                     </div>
 
                     <div class="choice">
-                        <input class="choice_choose" type="radio" name="choice_choose"/>
+                        <input class="choice_choose" type="radio" name="choice_choose" />
+                        <div class="choice_statement">(選項)</div> <!-- maybe text or image -->
+                    </div>
+
+                    <div class="choice">
+                        <input class="choice_choose" type="radio" name="choice_choose" />
                         <div class="choice_statement">(選項)</div> <!-- maybe text or image -->
                     </div>
                 </div>
@@ -82,4 +88,5 @@
         <span>※ 根據規定，全民國防測驗達一定分數者在申請時有加分作用，快看看你的分數有沒有達標吧！</span>
     </div>
 </body>
+
 </html>
