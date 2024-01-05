@@ -7,8 +7,8 @@
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-    <script type="text/javascript" src="scripts/script.js" defer></script>
     <script type="text/javascript" src="scripts/Qs.js" defer></script>
+    <script type="text/javascript" src="scripts/script.js" defer></script>
 
     <title>國防試題答題機</title>
 </head>
@@ -17,12 +17,12 @@
     <div id="title_area">全民國防試題答題機</div>
     <div id="setting_area">
         <div class="env_setting">
-            <label for="Qamount">請輸入欲答題數：</label>
-            <input type="text" id="Qamount" value="50" />
+            <label for="Q_amount">請輸入欲答題數：</label>
+            <input type="number" id="Q_amount" value="50" />
         </div>
         <div class="env_setting">
             <label for="exam_time">請輸入答題時間(分鐘)：</label>
-            <input type="text" id="exam_time" value="10" />
+            <input type="number" id="exam_time" value="10" />
         </div>
         <button id="setting_submit">確認</button>
     </div>
@@ -33,36 +33,11 @@
             <span id="left_time">00:00</span>
         </div>
 
-        <div id="Q_display">
-            <div class="Q_template">
-                <span class="Q_statement">(題幹)</span>
-
-                <div class="Q_choices">
-                    <div class="choice">
-                        <input class="choice_choose" type="radio" name="choice_choose" />
-                        <!-- (?) same name among questions => conflict? -->
-                        <div class="choice_statement">(選項)</div> <!-- maybe text or image -->
-                    </div>
-
-                    <div class="choice">
-                        <input class="choice_choose" type="radio" name="choice_choose" />
-                        <div class="choice_statement">(選項)</div> <!-- maybe text or image -->
-                    </div>
-
-                    <div class="choice">
-                        <input class="choice_choose" type="radio" name="choice_choose" />
-                        <div class="choice_statement">(選項)</div> <!-- maybe text or image -->
-                    </div>
-
-                    <div class="choice">
-                        <input class="choice_choose" type="radio" name="choice_choose" />
-                        <div class="choice_statement">(選項)</div> <!-- maybe text or image -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div id="Q_switch">
+            <div id="Q_list">
+                <button class="Q_index_template">(題號)</button>
+            </div>
+            
             <div id="switch_one">
                 <div class="switch_btn">
                     <button id="prev">上一題</button>
@@ -71,9 +46,19 @@
                     <button id="next">下一題</button>
                 </div>
             </div>
+        </div>
+        
+        <div id="Q_display">
+            <div class="Q_template">
+                <span class="Q_statement">(題幹)</span>
 
-            <div id="Q_list">
-                <button class="Q_index_template">(題號)</button>
+                <div class="Q_choices">
+                    <div class="choice_template">
+                        <input class="choice_choose" type="radio" name="choice_choose" />
+                        <!-- (?) same name among questions => conflict? -->
+                        <div class="choice_statement">(選項)</div> <!-- maybe text or image -->
+                    </div>
+                </div>
             </div>
         </div>
 

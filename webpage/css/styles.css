@@ -139,6 +139,74 @@ button:hover {
     align-items: center;
 }
 
+
+#Q_switch {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    border-top: 2px solid greenyellow;
+    border-bottom: 2px solid greenyellow;
+
+    margin: 3px;
+}
+
+#Q_list {
+    width: 98%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 3px;
+
+    border-bottom: 1px solid green;
+}
+
+.Q_index_template {
+    width: 5%;
+    min-width: 30px;
+    /* margin: 2px; */
+}
+
+.answering {
+    background-color: #bdc100;
+    color: white;
+}
+
+#switch_one {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 3px;
+}
+
+.switch_btn {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.switch_btn>button {
+    width: 80%;
+}
+
 .Q_template {
     width: 100%;
 
@@ -183,7 +251,7 @@ button:hover {
     margin: 3px;
 }
 
-.choice {
+.choice_template {
     width: 100%;
 
     display: flex;
@@ -194,7 +262,7 @@ button:hover {
     border: 1px solid gray;
 }
 
-.choice:hover {
+.choice_template:hover {
     background-color: #01017e;
     color: white;
 }
@@ -211,61 +279,6 @@ button:hover {
 .choice_statement {
     border-left: 1px solid gray;
     padding: 3px;
-}
-
-#Q_switch {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
-    border-top: 2px solid greenyellow;
-    border-bottom: 2px solid greenyellow;
-
-    margin: 3px;
-}
-
-#switch_one {
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-
-    justify-content: center;
-    align-items: center;
-
-    padding: 3px;
-}
-
-.switch_btn {
-    width: 50%;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-}
-
-.switch_btn>button {
-    width: 80%;
-}
-
-#Q_list {
-    width: 98%;
-
-    display: flex;
-    flex-direction: row;
-
-    justify-content: center;
-    align-items: center;
-
-    padding: 3px;
-
-    border-top: 1px solid green;
 }
 
 #Q_submit {

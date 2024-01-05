@@ -31,14 +31,58 @@ def packQuestion(sht, row) -> dict:
     question = dict()
 
     question["Ans"] = str(getExlValue(sht, row, EXL_ELE_TABLE["Ans"])).replace("\n", "").replace("\t", "")
+
+    qtype = 0
+
+    if(question["Ans"] == "None"):
+        return {}
+
+    elif (question["Ans"] == "○"):
+        qtype = 1
+        question["Ans"] = "0"
+
+    elif(question["Ans"] == "Ｘ"):
+        qtype = 1
+        question["Ans"] = "1"
+
+    elif(question["Ans"] == "Ａ"):
+        qtype = 2
+        question["Ans"] = "0"
+
+    elif(question["Ans"] == "Ｂ"):
+        qtype = 2
+        question["Ans"] = "1"
+
+    elif(question["Ans"] == "Ｃ"):
+        qtype = 2
+        question["Ans"] = "2"
+
+    elif(question["Ans"] == "Ｄ"):
+        qtype = 2
+        question["Ans"] = "3"
+
+    else:
+        print(f"<ERR> Unknown type of answer: {question['Ans']}")
+        return {}
+
     question["Q_index"] = str(getExlValue(sht, row, EXL_ELE_TABLE["QOrder"])).replace("\n", "").replace("\t", "")
+    
     question["Q_statement"] = str(getExlValue(sht, row, EXL_ELE_TABLE["Ques"])).replace("\n", "").replace("\t", "")
-    question["Q_choices"] = [
-        str(getExlValue(sht, row, EXL_ELE_TABLE["Sel_A"])).replace("\n", "").replace("\t", ""),
-        str(getExlValue(sht, row, EXL_ELE_TABLE["Sel_B"])).replace("\n", "").replace("\t", ""),
-        str(getExlValue(sht, row, EXL_ELE_TABLE["Sel_C"])).replace("\n", "").replace("\t", ""),
-        str(getExlValue(sht, row, EXL_ELE_TABLE["Sel_D"])).replace("\n", "").replace("\t", ""),
-    ]
+    
+    if(qtype == 1):
+        question["Q_choices"] = [
+            "○",
+            "Ｘ"
+        ]
+    else:
+        question["Q_choices"] = [
+            str(getExlValue(sht, row, EXL_ELE_TABLE["Sel_A"])).replace("\n", "").replace("\t", ""),
+            str(getExlValue(sht, row, EXL_ELE_TABLE["Sel_B"])).replace("\n", "").replace("\t", ""),
+            str(getExlValue(sht, row, EXL_ELE_TABLE["Sel_C"])).replace("\n", "").replace("\t", ""),
+            str(getExlValue(sht, row, EXL_ELE_TABLE["Sel_D"])).replace("\n", "").replace("\t", ""),
+        ]
+    
+    
     question["Expl"] = str(getExlValue(sht, row, EXL_ELE_TABLE["Expl"])).replace("\n", "").replace("\t", "")
 
     return question
@@ -70,7 +114,10 @@ if __name__ == "__main__":
             QAmount = int(getExlValue(sht, partNow + 2, EXL_ELE_TABLE["QPartAmount"])) 
 
             for qRowOffset in range(QAmount):
-                Qs[chNow][partNow].append(packQuestion(sht, partBegin + qRowOffset))
+                question = packQuestion(sht, partBegin + qRowOffset)
+
+                if(question != {}):
+                    Qs[chNow][partNow].append(question)
 
     # TODO: add img question
     
